@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Platform } from 'react-native';
+import {View, Text, Platform, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 
 const StyledView = styled.View`
@@ -45,6 +45,9 @@ class HomeView extends Component {
                 <StyledTitle>Welcome to React Native!</StyledTitle>
                 <StyledTitle>To get started, edit App.js</StyledTitle>
                 <StyledSubTitle>{instructions}</StyledSubTitle>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('WeeklyCalendar')}>
+                    <Text>Calendar</Text>
+                </TouchableOpacity>
             </StyledView>
         );
     }
